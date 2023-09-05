@@ -7,7 +7,7 @@ import GroceryList from './GroceryList';
 
 function App() {
   return (
-    <div className="App">
+    <div>
           Phase 2 React Project
           <Navbar />
           <Routes>
