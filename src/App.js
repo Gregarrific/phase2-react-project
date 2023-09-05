@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from './Navbar';
 import RecipeList from './RecipeList';
 import RecipeBox from './RecipeBox';
+import GroceryList from './GroceryList';
 
 function App() {
   return (
