@@ -21,7 +21,7 @@ function Recipe({ recipe }) {
                 <Accordion.Body>{steps}</Accordion.Body>
             </Accordion.Item>
         </Accordion>
-        <Button variant="primary">Go somewhere</Button>
+        <Button variant="primary" href={source} size="sm">Source</Button>
       </Card.Body>
     </Card>
     );
