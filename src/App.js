@@ -1,17 +1,28 @@
 import './App.css';
+import { useEffect } from 'react';
 import { Routes, Route } from "react-router-dom";
+
 import Navbar from './Navbar';
 import RecipeList from './RecipeList';
 import RecipeBox from './RecipeBox';
 import GroceryList from './GroceryList';
 
 function App() {
+
+  const [recipeList, setRecipeList] = useState([])
+
+  useEffect( () => {
+    fetch('http://localhost:3010/recipes')
+      .then( response => response.json())
+      .then( data => setRecipeList(data));
+  }, [])
+
   return (
     <div>
           Phase 2 React Project
           <Navbar />
           <Routes>
-            <Route path="/recipes" element={<RecipeList />} />
+            <Route path="/recipes" element={<RecipeList recipes={recipeList}/>} />
             <Route path="/favorites" element={<RecipeBox />} />
             <Route path="/grocery-list" element={<GroceryList />} />
           </Routes>
