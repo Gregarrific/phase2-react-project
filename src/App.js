@@ -1,5 +1,5 @@
 import './App.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Routes, Route } from "react-router-dom";
 
 import Navbar from './Navbar';
@@ -9,7 +9,7 @@ import GroceryList from './GroceryList';
 
 function App() {
 
-  const [recipeList, setRecipeList] = useState([])
+  const [recipeList, setRecipeList] = useState([]);
 
   useEffect( () => {
     fetch('http://localhost:3010/recipes')
