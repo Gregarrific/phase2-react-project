@@ -1,10 +1,10 @@
 import { Card, Accordion, Button } from "react-bootstrap";
 import GroupListing from "./GroupListing";
 
-function Recipe({ recipe }) {
+function Recipe({ recipe, border }) {
 
     return (
-    <Card style={{ width: '35rem' }} border='primary'>
+    <Card style={{ width: '35rem' }} border={border} className="mb-2">
         <Card.Header>{recipe.name.toUpperCase()}</Card.Header>
         <Card.Body>
             {/* <Card.Text>{recipe.description}</Card.Text> */}

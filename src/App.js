@@ -19,7 +19,6 @@ function App() {
 
   return (
     <div>
-          Phase 2 React Project
           <Navbar />
           <Routes>
             <Route path="/recipes" element={<RecipeList recipes={recipeList} />} />

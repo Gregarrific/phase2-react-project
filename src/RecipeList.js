@@ -9,7 +9,7 @@ function RecipeList({ recipes }) {
         {recipes.map( (recipe, index) => {
             return (
                 <Col md={'auto'} key={index}>
-                <Recipe key={recipe.id} recipe={recipe} />
+                <Recipe key={recipe.id} recipe={recipe} border="primary" />
                 </Col>
             );
         })}
