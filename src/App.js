@@ -22,8 +22,8 @@ function App() {
           Phase 2 React Project
           <Navbar />
           <Routes>
-            <Route path="/recipes" element={<RecipeList recipes={recipeList}/>} />
-            <Route path="/favorites" element={<RecipeBox />} />
+            <Route path="/recipes" element={<RecipeList recipes={recipeList} />} />
+            <Route path="/favorites" element={<RecipeBox recipes={recipeList} />} />
             <Route path="/grocery-list" element={<GroceryList />} />
           </Routes>
     </div>
