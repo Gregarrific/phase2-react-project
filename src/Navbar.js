@@ -1,12 +1,14 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import { Button } from "react-bootstrap";
 
 function Navbar() {
     return (
         <nav>
-            <Link to="/recipes"><Button variant="primary">Recipes</Button></Link>{' '}
-            <Link to="/favorites"><Button variant="primary">Saved Recipes</Button></Link>{' '}
-            <Link to="/grocery-list"><Button variant="primary">Grocery List</Button></Link>{' '}
+            <NavLink to="/recipes">
+                <Button>Recipes</Button>
+            </NavLink>{' '}
+            <NavLink to="/favorites"><Button>Saved Recipes</Button></NavLink>{' '}
+            <NavLink to="/grocery-list"><Button>Grocery List</Button></NavLink>{' '}
         </nav>
     );
 

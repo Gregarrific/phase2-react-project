@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: cornsilk;
 }
 
 div {
@@ -16,4 +17,13 @@ div {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+nav a {
+  color: firebrick;
+  border-bottom: none;
+}
+
+btn.active {
+  color: firebrick;
 }
