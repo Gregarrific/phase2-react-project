@@ -22,7 +22,7 @@ function Recipe({ recipe }) {
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
-            <Button variant="primary" href={recipe.source} size="sm">Source</Button>
+            <Button variant="outline-primary" href={recipe.url} size="sm">Original Source</Button>
         </Card.Body>
     </Card>
     );
