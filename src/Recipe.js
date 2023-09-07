@@ -22,7 +22,11 @@ function Recipe({ recipe, border }) {
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
-            <Button variant="outline-primary" href={recipe.url} size="sm">Original Source</Button>
+            {recipe.favorite ?
+                <Button variant="danger" size="sm">Saved</Button> :
+                <Button variant="outline-primary" size="sm">Save Receipe</Button>
+            }
+            {' '}<Button variant="outline-primary" href={recipe.url} size="sm">Source</Button>
         </Card.Body>
     </Card>
     );
