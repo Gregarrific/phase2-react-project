@@ -17,11 +17,15 @@ function App() {
       .then( data => setRecipeList(data));
   }, [])
 
+  function handleSave(recipeID, status) {
+    console.log(recipeID + status);
+  }
+
   return (
     <div>
           <Navbar />
           <Routes>
-            <Route path="/recipes" element={<RecipeList recipes={recipeList} />} />
+            <Route path="/recipes" element={<RecipeList recipes={recipeList} handleSave={handleSave} />} />
             <Route path="/favorites" element={<RecipeBox recipes={recipeList} />} />
             <Route path="/grocery-list" element={<GroceryList />} />
           </Routes>
