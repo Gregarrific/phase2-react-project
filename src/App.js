@@ -18,7 +18,18 @@ function App() {
   }, [])
 
   function handleSave(recipeID, status) {
-    console.log(recipeID + status);
+    fetch(`http://localhost:3010/recipes/${recipeID}`, {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+        },
+      method: 'PATCH',
+      body: JSON.stringify({
+        favorite: status
+      })
+    })
+    .then (response => response.json())
+    .then ( data => console.log(data));
   }
 
   return (
