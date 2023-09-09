@@ -13,7 +13,7 @@ function RecipeResult({ recipe, border, saveRecipe }) {
             View Recipe
         </Button>{' '}
         {recipe.name.toUpperCase()}
-        <Offcanvas show={show} onHide={handleClose}>
+        <Offcanvas show={show} onHide={handleClose} placement="end">
                 <Offcanvas.Header closeButton>
                 <Offcanvas.Title>{recipe.name}</Offcanvas.Title>
                 </Offcanvas.Header>
