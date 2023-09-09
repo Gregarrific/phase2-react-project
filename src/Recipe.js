@@ -7,7 +7,6 @@ function Recipe({ recipe, border, saveRecipe }) {
     <Card style={{ width: '30rem' }} border={border} className="mb-2">
         <Card.Header>{recipe.name.toUpperCase()}</Card.Header>
         <Card.Body>
-            {/* <Card.Text>{recipe.description}</Card.Text> */}
             <Accordion>
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>INGREDIENTS</Accordion.Header>

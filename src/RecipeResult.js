@@ -20,7 +20,7 @@ function RecipeResult({ recipe, border, saveRecipe }) {
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                 <p>{recipe.description}</p>
-            <Accordion>
+            <Accordion defaultActiveKey="0">
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>INGREDIENTS</Accordion.Header>
                     <Accordion.Body>
