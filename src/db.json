@@ -1,4 +1,36 @@
 {
+  "groceries": [
+    {
+      "id": 1,
+      "item": "carrots",
+      "complete": false
+    },
+    {
+      "id": 1,
+      "item": "dried rosemary",
+      "complete": false
+    },
+    {
+      "id": 2,
+      "item": "Salt",
+      "complete": false
+    },
+    {
+      "id": 3,
+      "item": "Flour",
+      "complete": false
+    },
+    {
+      "id": 4,
+      "item": "butter",
+      "complete": false
+    },
+    {
+      "id": 5,
+      "item": "milk",
+      "complete": true
+    }
+  ],
   "recipes": [
     {
       "id": 200,
