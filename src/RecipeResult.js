@@ -44,7 +44,7 @@ function RecipeResult({ recipe, border, saveRecipe }) {
                     Save Receipe
                 </Button>
             }
-            {' '}<Button variant="outline-primary" href={recipe.url} size="sm">Source</Button>
+            {'  '}<Button variant="outline-primary" href={recipe.url} target="_blank" size="sm">Recipe Source</Button>
             </Offcanvas.Body>
         </Offcanvas>
     </>
