@@ -14,7 +14,7 @@ function App() {
 
   // Use useEffect hook to load recipes on firt load only
   useEffect( () => {
-    fetch('http://localhost:3010/recipes')
+    fetch('http://localhost:3010/recipes') //Recipe source -> https://frosch.cosy.sbg.ac.at/datasets/json/recipes
       .then( response => response.json())
       .then( data => setRecipeList(data));
   }, [])
