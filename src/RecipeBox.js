@@ -1,7 +1,7 @@
 import Recipe from "./Recipe";
 import { Row, Col } from "react-bootstrap";
 
-function RecipeBox({recipes}) {
+function RecipeBox({recipes, handleSave}) {
 
     function saveRecipe(e) {
         const data = e.target.id.split("-");
@@ -18,7 +18,7 @@ function RecipeBox({recipes}) {
         .map( (recipe, index) => {
             return (
                 <Col md={'auto'} key={index}>
-                <Recipe key={recipe.id} recipe={recipe} border="danger" saveReceipe={saveRecipe} />
+                <Recipe key={recipe.id} recipe={recipe} border="danger" saveRecipe={saveRecipe} />
                 </Col>
             );
         })}

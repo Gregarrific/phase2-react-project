@@ -6,11 +6,13 @@ import Navbar from './Navbar';
 import RecipeList from './RecipeList';
 import RecipeBox from './RecipeBox';
 import GroceryList from './GroceryList';
+import { scryRenderedDOMComponentsWithClass } from 'react-dom/test-utils';
 
 function App() {
-
+  // Create variable and function to update state of recipes
   const [recipeList, setRecipeList] = useState([]);
 
+  // Use useEffect hook to load recipes on firt load only
   useEffect( () => {
     fetch('http://localhost:3010/recipes')
       .then( response => response.json())
@@ -18,6 +20,9 @@ function App() {
   }, [])
 
   function handleSave(recipeID, status) {
+    const favStatus = !status;
+    
+    // Use Fetch to patch the updated recipe information 
     fetch(`http://localhost:3010/recipes/${recipeID}`, {
       headers: {
         Accept: "application/json",
@@ -25,11 +30,23 @@ function App() {
         },
       method: 'PATCH',
       body: JSON.stringify({
-        favorite: status
+        favorite: favStatus
       })
     })
     .then (response => response.json())
-    .then ( data => console.log(data));
+    .then ( updatedRecipe => {
+      console.log(updatedRecipe);
+      // Find the index of the recipe to be updated
+      const indexToUpdate = recipeList.findIndex((recipe) => recipe.id === updatedRecipe.id);
+      if (indexToUpdate !== -1) {
+        // Create a copy of the recipeList to avoid mutating
+        const updatedRecipeList = [...recipeList];
+        // Update the recipe at the correct index with the patched values recevied from fetch response
+        updatedRecipeList[indexToUpdate] = updatedRecipe;
+        // Update the state with the new recipeList
+        setRecipeList(updatedRecipeList);
+      }
+    });
   }
 
   return (
@@ -37,7 +54,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/recipes" element={<RecipeList recipes={recipeList} handleSave={handleSave} />} />
-            <Route path="/favorites" element={<RecipeBox recipes={recipeList} />} />
+            <Route path="/favorites" element={<RecipeBox recipes={recipeList} handleSave={handleSave} />} />
             <Route path="/grocery-list" element={<GroceryList />} />
           </Routes>
     </div>

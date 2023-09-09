@@ -24,7 +24,7 @@
         "Can be made up to this point 1 month in advance and frozen. To cook from frozen, simply add 10 mins to cooking time below.",
         "Brush more beaten egg all over the pastry. Place in the oven and cook for 25-35 mins until the pastry is puffed and crisp and the meat has cooked through. Remove and eat hot or cold with tomato ketchup if you like."
       ],
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 201,
@@ -50,7 +50,7 @@
         "First make the marshmallow snowman. Skewer the marshmallows together with a cocktail stick - cut off any of the stick that protrudes from the top. Use a little of the icing pen to stick a chocolate button and peanut butter cup to the top of each marshmallow stack, then draw on a face and 3 dots for buttons. Plait 3 strawberry laces and tie around the neck for a scarf. Stick the snowman to a cookie with a little more icing, then set aside to dry for a few mins.",
         "Mix the cocoa and Horlicks together in the bottom of your jar. Put the snowman on top, then scatter around the mini marshmallows. Screw on the lid, tie with a ribbon and a gift tag with the following instructions: Warm 300ml milk in a pan. Remove the snowman from the jar and add the milk. Stir until smooth and chocolatey, then enjoy, with your marshmallow snowman for dunking."
       ],
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 202,
@@ -160,7 +160,7 @@
       "steps": [
         "Tip all the ingredients into a small saucepan and bring to a gentle simmer. Stir over a low heat for 10 mins until the cranberries have burst into a thick, glossy, sticky sauce. We like ours on the sour side to give your plate a hit of acidity, but if you prefer it sweeter add a bit more sugar. Leave the sauce to cool, then sprinkle over a little orange zest to serve. Can be kept covered in the fridge for up to a week, or frozen for 4 months."
       ],
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 206,
@@ -192,7 +192,7 @@
         "Knead some colouring into the ready-to-roll icing with the peppermint extract. Roll out on an icing sugar dusted surface, then lift over to cover the cake, smoothing with your hands. Trim excess icing, then scatter with decorations.",
         "Chill again for 1 hr to firm up, then serve or keep in the fridge, removing 30 mins before serving."
       ],
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 207,
@@ -289,7 +289,8 @@
         "Bring a large pan of salted water to the boil. Throw in the parsnips and boil for 3.5 mins. Drain well. From the thinner ends, cut off lengths of parsnip that fit widthways across the bottom of your loaf tin. Keep going until you have enough to snugly line the base of the tin. Roughly chop all leftover parsnip and mix into the nut mixture.",
         "Heat oven to 180C/160C fan/gas 4. Mix the parsnip lengths with 1 more tbsp butter and the honey to coat, then fit them into the tin. Top with ¹/³ of the nut mixture pack it down well and smooth the surface. Spread ¹/³ of the cranberry sauce on top, leaving a small gap around the edges. Top with the remaining nut mixture and pack down as before. The loaf can be made up to 24 hrs ahead, then covered and chilled, before continuing. Cover with foil then bake for 1 hr.",
         "To serve, melt the remaining 2 tbsp butter in a small pan and sizzle the reserved sage leaves for a minute. Splash water into the remaining cooked cranberries until saucy. Loosen around the sides of the loaf with a round-bladed knife if you need, then turn out. Drizzle with the sage butter and leaves. Serve in slices with extra cranberry sauce."
-      ]
+      ],
+      "favorite": false
     }
   ]
 }
