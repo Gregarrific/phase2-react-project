@@ -1,7 +1,7 @@
 import Recipe from "./Recipe";
 import { Row, Col } from "react-bootstrap";
 
-function RecipeBox({recipes, handleSave}) {
+function SavedRecipes({recipes, handleSave}) {
 
     function saveRecipe(e) {
         const data = e.target.id.split("-");
@@ -27,4 +27,4 @@ function RecipeBox({recipes, handleSave}) {
     )
 }
 
-export default RecipeBox;
+export default SavedRecipes;

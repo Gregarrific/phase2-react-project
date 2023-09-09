@@ -5,7 +5,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Navbar from './Navbar';
 import RecipeList from './RecipeList';
-import RecipeBox from './RecipeBox';
+import SavedRecipes from './SavedRecipes';
 import GroceryList from './GroceryList';
 
 function App() {
@@ -55,7 +55,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/recipes" element={<RecipeList recipes={recipeList} handleSave={handleSave} />} />
-            <Route path="/favorites" element={<RecipeBox recipes={recipeList} handleSave={handleSave} />} />
+            <Route path="/saved-recipes" element={<SavedRecipes recipes={recipeList} handleSave={handleSave} />} />
             <Route path="/grocery-list" element={<GroceryList />} />
           </Routes>
     </div>
