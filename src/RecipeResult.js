@@ -16,7 +16,7 @@ function RecipeResult({ recipe, border, saveRecipe }) {
 
         <Offcanvas show={show} onHide={handleClose} placement="end">
                 <Offcanvas.Header closeButton>
-                <Offcanvas.Title>{recipe.name}</Offcanvas.Title>
+                <Offcanvas.Title>{recipe.name.toUpperCase()}</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                 <p>{recipe.description}</p>
