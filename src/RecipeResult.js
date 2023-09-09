@@ -13,6 +13,7 @@ function RecipeResult({ recipe, border, saveRecipe }) {
             View Recipe
         </Button>{' '}
         {recipe.name.toUpperCase()}
+
         <Offcanvas show={show} onHide={handleClose} placement="end">
                 <Offcanvas.Header closeButton>
                 <Offcanvas.Title>{recipe.name}</Offcanvas.Title>
@@ -45,8 +46,8 @@ function RecipeResult({ recipe, border, saveRecipe }) {
             }
             {' '}<Button variant="outline-primary" href={recipe.url} size="sm">Source</Button>
             </Offcanvas.Body>
-            </Offcanvas>
-            </>
+        </Offcanvas>
+    </>
     );
 }
 

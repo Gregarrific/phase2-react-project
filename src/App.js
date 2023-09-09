@@ -18,10 +18,10 @@ function App() {
       .then( response => response.json())
       .then( data => setRecipeList(data));
   }, [])
-
+    
   function handleSave(recipeID, status) {
     const favStatus = !status;
-    
+
     // Use Fetch to patch the updated recipe information 
     fetch(`http://localhost:3010/recipes/${recipeID}`, {
       headers: {
