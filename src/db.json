@@ -24,7 +24,7 @@
         "Can be made up to this point 1 month in advance and frozen. To cook from frozen, simply add 10 mins to cooking time below.",
         "Brush more beaten egg all over the pastry. Place in the oven and cook for 25-35 mins until the pastry is puffed and crisp and the meat has cooked through. Remove and eat hot or cold with tomato ketchup if you like."
       ],
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 201,
@@ -261,7 +261,8 @@
         "Fry the chorizo in a large saucepan for about 5 mins until golden and crispy at the edges. Remove the chorizo with a slotted spoon and transfer to a plate, leaving the oil that has been released in the pan.",
         "Turn the heat down low and gently cook the onion in the chorizo oil for 15-20 mins or until very soft and starting to brown. Stir in the garlic, muscovado sugar, Sherry, maple syrup, espresso and chorizo.",
         "Cook slowly for 35-40 mins, stirring occasionally, until thick and syrupy. Turn off the heat, leave to cool a little, then tip everything into a food processor. Pulse briefly to chop everything up into really small pieces, then leave the mixture to cool before packing it into 2 sterilised jam jars. Will keep for up to 1 month in the fridge."
-      ]
+      ],
+      "favorite": false
     },
     {
       "id": 210,
