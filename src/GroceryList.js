@@ -4,7 +4,7 @@ function GroceryList({ groceryList }) {
  return (
    <div className="grocery-list">
       <h1>Grocery List</h1>
-      <Table striped bordered hover variant="dark">
+      <Table striped bordered hover>
          <thead>
             <tr>
                <th>DONE</th>
@@ -16,9 +16,9 @@ function GroceryList({ groceryList }) {
          {groceryList.map( item => {
             return (
                <tr>
-                  <td>{' '}</td>
+                  <td></td>
                   <td>{item.item.toUpperCase()}</td>
-                  <td><Button variant="outline-danger">X</Button></td>
+                  <td><Button variant="outline-danger" size="sm">X</Button></td>
                </tr>
             )
          })
