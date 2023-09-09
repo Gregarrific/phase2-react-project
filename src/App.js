@@ -1,4 +1,5 @@
 import './App.css';
+
 import { useEffect, useState } from 'react';
 import { Routes, Route } from "react-router-dom";
 
@@ -6,7 +7,6 @@ import Navbar from './Navbar';
 import RecipeList from './RecipeList';
 import RecipeBox from './RecipeBox';
 import GroceryList from './GroceryList';
-import { scryRenderedDOMComponentsWithClass } from 'react-dom/test-utils';
 
 function App() {
   // Create variable and function to update state of recipes
@@ -18,7 +18,8 @@ function App() {
       .then( response => response.json())
       .then( data => setRecipeList(data));
   }, [])
-    
+  
+  // Handles Patch and state for save button
   function handleSave(recipeID, status) {
     const favStatus = !status;
 
