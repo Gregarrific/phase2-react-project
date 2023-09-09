@@ -11,8 +11,16 @@ import GroceryList from './GroceryList';
 function App() {
   // Create variable and function to update state of recipes
   const [recipeList, setRecipeList] = useState([]);
+  const [groceryList, setGroceryList] = useState([]);
 
-  // Use useEffect hook to load recipes on firt load only
+  // Use useEffect hook to load grocery list on first load only
+  useEffect( () => {
+    fetch('http://localhost:3010/groceries')
+      .then( response => response.json())
+      .then( data => setGroceryList(data));
+  }, [])
+
+  // Use useEffect hook to load recipes on first load only
   useEffect( () => {
     fetch('http://localhost:3010/recipes') //Recipe source -> https://frosch.cosy.sbg.ac.at/datasets/json/recipes
       .then( response => response.json())
@@ -56,7 +64,7 @@ function App() {
           <Routes>
             <Route path="/recipes" element={<RecipeList recipes={recipeList} handleSave={handleSave} />} />
             <Route path="/saved-recipes" element={<SavedRecipes recipes={recipeList} handleSave={handleSave} />} />
-            <Route path="/grocery-list" element={<GroceryList />} />
+            <Route path="/grocery-list" element={<GroceryList groceryList={groceryList} />} />
           </Routes>
     </div>
   );
