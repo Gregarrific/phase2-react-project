@@ -8,7 +8,7 @@ body {
   background-color: cornsilk;
 }
 
-div {
+div.g-4 {
   padding-left:2px;
   padding-bottom:2px;
   margin:5px;
