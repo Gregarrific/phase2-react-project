@@ -7,6 +7,7 @@ import Navbar from './Navbar';
 import RecipeList from './RecipeList';
 import SavedRecipes from './SavedRecipes';
 import GroceryList from './GroceryList';
+import Home from './Home';
 
 function App() {
   // Create variable and function to update state of recipes
@@ -97,6 +98,7 @@ function App() {
     <div>
           <Navbar />
           <Routes>
+            <Route path="/" element={<Home />} />
             <Route path="/recipes" element={<RecipeList recipes={recipeList} handleSave={handleSave} />} />
             <Route path="/saved-recipes" element={<SavedRecipes recipes={recipeList} handleSave={handleSave} />} />
             <Route path="/grocery-list" element={<GroceryList groceryList={groceryList} handlePurchase={handlePurchase}/>} />
