@@ -8,16 +8,16 @@ function Home() {
                 <ul>
                     <li>Searchable recipe database.</li>
                     <li>Review recipe directions and ingredients.</li>
-                    <li>Save recipes that you want to cook later.</li>
+                    <li>Save recipes that you want to cook for later.</li>
                     <li>View the recipes original web page for more information.</li>
                 </ul>
-            <li>Review recipes you have saved in the Saved Recipes tab.</li>
+            <li>Review recipes that you have saved in the Saved Recipes tab.</li>
                 <ul>
-                    <li>Review recipe cards of recipes that you have saved.</li>
-                    <li>Remove recipes from your saved list you no longer want.</li>
+                    <li>Review recipe cards of the recipes that you have saved.</li>
+                    <li>Remove recipes from your saved list that you no longer want.</li>
                     <li>Add ingredients from recipes to your Grocery List.</li>
                 </ul>
-            <li>Update your grocery list on the Grocery List tab.</li>
+            <li>Update/View your grocery list on the Grocery List tab.</li>
                 <ul>
                     <li>Manually add items to your Grocery List.</li>
                     <li>Mark off ingredients that you have purchased.</li>
