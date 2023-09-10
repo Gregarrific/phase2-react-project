@@ -1,6 +1,6 @@
 import { Table, Button, Card } from "react-bootstrap";
 
-function GroceryList({ groceryList, handlePurchase }) {
+function GroceryList({ groceryList, handlePurchase, handleDelete }) {
    return (
       <div className="grocery-list">
          <h1>Grocery List</h1>
@@ -31,7 +31,9 @@ function GroceryList({ groceryList, handlePurchase }) {
                            </td>
                         }
                         <td className={groceryItem.complete ? "purchased" : "not-complete"}>{groceryItem.item.toUpperCase()}</td>
-                        <td><Button variant="outline-danger" size="sm">x</Button></td>
+                        <td><Button id={groceryItem.id}
+                           variant="outline-danger" size="sm" onClick={handleDelete}>x
+                        </Button></td>
                      </tr>
                   )
                })

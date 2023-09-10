@@ -120,6 +120,10 @@ function App() {
       });
     }
 
+    function handleDelete(e) {
+      console.log(e.target.id);
+    }
+
   return (
     <div>
           <Navbar />
@@ -130,7 +134,7 @@ function App() {
             <Route path="/saved-recipes" 
               element={<SavedRecipes recipes={recipeList} handleSave={handleSave} handleAddIngredient={handleAddIngredient} />} />
             <Route path="/grocery-list" 
-              element={<GroceryList groceryList={groceryList} handlePurchase={handlePurchase}/>} />
+              element={<GroceryList groceryList={groceryList} handlePurchase={handlePurchase} handleDelete={handleDelete}/>} />
           </Routes>
     </div>
   );

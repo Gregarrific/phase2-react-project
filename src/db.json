@@ -44,6 +44,11 @@
       "item": "500g cooking chorizo, diced",
       "complete": false,
       "id": 11
+    },
+    {
+      "item": "handful parsley, chopped",
+      "complete": false,
+      "id": 12
     }
   ],
   "recipes": [
