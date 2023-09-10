@@ -36,19 +36,14 @@
       "id": 7
     },
     {
-      "item": "160g feta-stuffed olives",
+      "item": "4 crushed juniper berries",
       "complete": false,
-      "id": 10
+      "id": 8
     },
     {
-      "item": "500g cooking chorizo, diced",
+      "item": "1 egg, beaten",
       "complete": false,
-      "id": 11
-    },
-    {
-      "item": "handful parsley, chopped",
-      "complete": false,
-      "id": 12
+      "id": 9
     }
   ],
   "recipes": [

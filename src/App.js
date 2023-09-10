@@ -121,7 +121,31 @@ function App() {
     }
 
     function handleDelete(e) {
-      console.log(e.target.id);
+      const groceryID = parseInt(e.target.id);
+      // Use Fetch to DELETE item from grocery list 
+      fetch(`http://localhost:3010/groceries/${groceryID}`, {
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json"
+          },
+        method: 'DELETE',
+      })
+      .then (response => response.json())
+      .then ( updatedGroceryList => {
+        // Find the index of the grocery list item that was deleted
+        const indexToDelete = groceryList.findIndex((item) => item.id === groceryID);
+        console.log(indexToDelete);
+        if (indexToDelete !== -1) {
+          // Create a copy of the recipeList to avoid mutating
+          const updatedGroceryList = [...groceryList];
+          console.log(updatedGroceryList);
+          // Update the recipe at the correct index with the patched values recevied from fetch response
+          updatedGroceryList.splice(indexToDelete, 1);
+          // Update the state with the new recipeList
+          console.log(updatedGroceryList);
+          setGroceryList(updatedGroceryList);
+        }
+      });
     }
 
   return (
