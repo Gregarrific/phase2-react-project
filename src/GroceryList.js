@@ -18,8 +18,17 @@ function GroceryList({ groceryList, handlePurchase }) {
                   return (
                      <tr key={item.id}>
                         { item.complete ? 
-                           <td><Button variant="success" size="sm" onClick={handlePurchase}>Yes</Button></td> :
-                           <td><Button variant="outline-success" size="sm" onClick={handlePurchase}>No</Button></td>
+                           <td><Button 
+                              variant="success" size="sm"
+                              onClick={handlePurchase} id={`Y-${item.id}`}>
+                                 Yes
+                              </Button>
+                           </td> :
+                           <td><Button 
+                              variant="outline-success" size="sm" 
+                              onClick={handlePurchase} id={`N-${item.id}`}>
+                                 No</Button>
+                           </td>
                         }
                         <td className={item.complete ? "purchased" : "not-complete"}>{item.item.toUpperCase()}</td>
                         <td><Button variant="outline-danger" size="sm">x</Button></td>
