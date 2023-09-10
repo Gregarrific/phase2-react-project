@@ -28,7 +28,7 @@ function App() {
       .then( data => setRecipeList(data));
   }, [])
   
-  // Handles Patch and state for grocery list purchase
+  // Handles PATCH and state for grocery list purchase
   function handlePurchase(e) {
       const buttonData = e.target.id.split('-');
       //set groceryID to the id number of the grocery list item
@@ -36,7 +36,7 @@ function App() {
       //set isPurchased to either true or false
       const isPurchased = (buttonData[0] === "Y" ? true : false);
   
-      // Use Fetch to patch the updated recipe information 
+      // Use Fetch to PATCH the updated recipe information 
       fetch(`http://localhost:3010/groceries/${groceryID}`, {
         headers: {
           Accept: "application/json",
@@ -63,11 +63,11 @@ function App() {
       });
   }
 
-  // Handles Patch and state for save button
+  // Handles PATCH and state for save button
   function handleSave(recipeID, status) {
     const favStatus = !status;
 
-    // Use Fetch to patch the updated recipe information 
+    // Use Fetch to PATCH the updated recipe information 
     fetch(`http://localhost:3010/recipes/${recipeID}`, {
       headers: {
         Accept: "application/json",
@@ -94,14 +94,42 @@ function App() {
     });
   }
 
+    // Handles POST for adding ingredient to grocery list
+    function handleAddIngredient(e) {
+  
+      // Use Fetch to POST new item for grocery list 
+      fetch(`http://localhost:3010/groceries}`, {
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json"
+          },
+        method: 'POST',
+        body: JSON.stringify({
+          item: "placeholder",
+          complete: false
+        })
+      })
+      .then (response => response.json())
+      .then ( updatedGroceryList => {
+        console.log(updatedGroceryList);
+        // Create new grocery list array with new item added
+        const newGroceryList = [...groceryList, updatedGroceryList]
+        console.log(newGroceryList);
+        // setRecipeList(updatedRecipeList);
+      });
+    }
+
   return (
     <div>
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/recipes" element={<RecipeList recipes={recipeList} handleSave={handleSave} />} />
-            <Route path="/saved-recipes" element={<SavedRecipes recipes={recipeList} handleSave={handleSave} />} />
-            <Route path="/grocery-list" element={<GroceryList groceryList={groceryList} handlePurchase={handlePurchase}/>} />
+            <Route path="/recipes" 
+              element={<RecipeList recipes={recipeList} handleSave={handleSave} />} />
+            <Route path="/saved-recipes" 
+              element={<SavedRecipes recipes={recipeList} handleSave={handleSave} handleAddIngredient={handleAddIngredient} />} />
+            <Route path="/grocery-list" 
+              element={<GroceryList groceryList={groceryList} handlePurchase={handlePurchase}/>} />
           </Routes>
     </div>
   );

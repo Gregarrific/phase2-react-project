@@ -1,7 +1,11 @@
 import { Card, Accordion, Button } from "react-bootstrap";
-import GroupListing from "./GroupListing";
+import StepListing from "./StepListing";
+import IngredientListing from "./IngredientListing";
 
-function Recipe({ recipe, border, saveRecipe }) {
+function Recipe({ recipe, border, saveRecipe, addIngredient }) {
+    function handleAddIngredient(e) {
+        console.log(e.target);
+    }
 
     return (
     <Card style={{ width: '30rem' }} border={border} className="mb-2">
@@ -11,13 +15,13 @@ function Recipe({ recipe, border, saveRecipe }) {
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>INGREDIENTS</Accordion.Header>
                     <Accordion.Body>
-                        <GroupListing itemsList={recipe.ingredients}    />
+                        <IngredientListing itemsList={recipe.ingredients} handleAddIngredient={handleAddIngredient} />
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="1">
                     <Accordion.Header>DIRECTIONS</Accordion.Header>
                     <Accordion.Body>
-                        <GroupListing itemsList={recipe.steps} />
+                        <StepListing itemsList={recipe.steps} />
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>

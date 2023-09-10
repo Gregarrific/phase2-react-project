@@ -1,6 +1,6 @@
 import { Accordion, Button, Offcanvas } from "react-bootstrap";
 import { useState } from "react";
-import GroupListing from "./GroupListing";
+import StepListing from "./StepListing";
 
 function RecipeResult({ recipe, border, saveRecipe }) {
     const [show, setShow] = useState(false);
@@ -24,13 +24,13 @@ function RecipeResult({ recipe, border, saveRecipe }) {
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>INGREDIENTS</Accordion.Header>
                     <Accordion.Body>
-                        <GroupListing itemsList={recipe.ingredients}    />
+                        <StepListing itemsList={recipe.ingredients} />
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="1">
                     <Accordion.Header>DIRECTIONS</Accordion.Header>
                     <Accordion.Body>
-                        <GroupListing itemsList={recipe.steps} />
+                        <StepListing itemsList={recipe.steps} />
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>

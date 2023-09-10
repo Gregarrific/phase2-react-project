@@ -1,7 +1,7 @@
 import Recipe from "./Recipe";
 import { Row, Col } from "react-bootstrap";
 
-function SavedRecipes({recipes, handleSave}) {
+function SavedRecipes({recipes, handleSave, handleAddIngredient}) {
 
     function saveRecipe(e) {
         const data = e.target.id.split("-");
