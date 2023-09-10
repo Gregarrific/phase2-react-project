@@ -27,3 +27,7 @@ nav a {
 btn.active {
   color: firebrick;
 }
+
+td.purchased {
+  text-decoration: line-through;
+}
