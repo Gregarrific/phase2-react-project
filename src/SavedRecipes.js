@@ -10,6 +10,10 @@ function SavedRecipes({recipes, handleSave, handleAddIngredient}) {
         handleSave(recipeID, status);
     }
 
+    function addIngredient(item) {
+        handleAddIngredient(item);
+    }
+
     return (
         <div>
         <h1>Saved Recipes</h1>
@@ -18,7 +22,7 @@ function SavedRecipes({recipes, handleSave, handleAddIngredient}) {
         .map( (recipe, index) => {
             return (
                 <Col md={'auto'} key={index}>
-                <Recipe key={recipe.id} recipe={recipe} border="danger" saveRecipe={saveRecipe} />
+                <Recipe key={recipe.id} recipe={recipe} border="danger" saveRecipe={saveRecipe} addIngredient={addIngredient} />
                 </Col>
             );
         })}

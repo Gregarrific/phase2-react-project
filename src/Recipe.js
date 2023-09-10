@@ -4,7 +4,7 @@ import IngredientListing from "./IngredientListing";
 
 function Recipe({ recipe, border, saveRecipe, addIngredient }) {
     function handleAddIngredient(e) {
-        console.log(e.target);
+        addIngredient(e.target.id);
     }
 
     return (

@@ -95,17 +95,18 @@ function App() {
   }
 
     // Handles POST for adding ingredient to grocery list
-    function handleAddIngredient(e) {
-  
+    function handleAddIngredient(item) {
+      const newItem = item;
+
       // Use Fetch to POST new item for grocery list 
-      fetch(`http://localhost:3010/groceries}`, {
+      fetch("http://localhost:3010/groceries", {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json"
           },
         method: 'POST',
         body: JSON.stringify({
-          item: "placeholder",
+          item: newItem,
           complete: false
         })
       })
@@ -115,7 +116,7 @@ function App() {
         // Create new grocery list array with new item added
         const newGroceryList = [...groceryList, updatedGroceryList]
         console.log(newGroceryList);
-        // setRecipeList(updatedRecipeList);
+        setGroceryList(newGroceryList);
       });
     }
 

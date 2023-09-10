@@ -14,23 +14,23 @@ function GroceryList({ groceryList, handlePurchase }) {
                   </tr>
                </thead>
                <tbody>
-               {groceryList.map( item => {
+               {groceryList.map( groceryItem => {
                   return (
-                     <tr key={item.id}>
-                        { item.complete ? 
+                     <tr key={groceryItem.id}>
+                        { groceryItem.complete ? 
                            <td><Button 
                               variant="success" size="sm"
-                              onClick={handlePurchase} id={`Y-${item.id}`}>
+                              onClick={handlePurchase} id={`Y-${groceryItem.id}`}>
                                  Yes
                               </Button>
                            </td> :
                            <td><Button 
                               variant="outline-success" size="sm" 
-                              onClick={handlePurchase} id={`N-${item.id}`}>
+                              onClick={handlePurchase} id={`N-${groceryItem.id}`}>
                                  No</Button>
                            </td>
                         }
-                        <td className={item.complete ? "purchased" : "not-complete"}>{item.item.toUpperCase()}</td>
+                        <td className={groceryItem.complete ? "purchased" : "not-complete"}>{groceryItem.item.toUpperCase()}</td>
                         <td><Button variant="outline-danger" size="sm">x</Button></td>
                      </tr>
                   )

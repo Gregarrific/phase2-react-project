@@ -23,12 +23,27 @@
     {
       "id": 4,
       "item": "butter",
-      "complete": false
+      "complete": true
     },
     {
       "id": 5,
       "item": "milk",
       "complete": true
+    },
+    {
+      "item": ".5 small garlic clove",
+      "complete": false,
+      "id": 7
+    },
+    {
+      "item": "160g feta-stuffed olives",
+      "complete": false,
+      "id": 10
+    },
+    {
+      "item": "500g cooking chorizo, diced",
+      "complete": false,
+      "id": 11
     }
   ],
   "recipes": [
