@@ -27,6 +27,11 @@ function App() {
       .then( data => setRecipeList(data));
   }, [])
   
+  // Handles Patch and state for grocery list purchase
+  function handlePurchase() {
+    console.log("Handle Purchase fired");
+  }
+
   // Handles Patch and state for save button
   function handleSave(recipeID, status) {
     const favStatus = !status;
@@ -64,7 +69,7 @@ function App() {
           <Routes>
             <Route path="/recipes" element={<RecipeList recipes={recipeList} handleSave={handleSave} />} />
             <Route path="/saved-recipes" element={<SavedRecipes recipes={recipeList} handleSave={handleSave} />} />
-            <Route path="/grocery-list" element={<GroceryList groceryList={groceryList} />} />
+            <Route path="/grocery-list" element={<GroceryList groceryList={groceryList} handlePurchase={handlePurchase}/>} />
           </Routes>
     </div>
   );

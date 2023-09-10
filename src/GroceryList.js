@@ -1,6 +1,6 @@
 import { Table, Button, Card } from "react-bootstrap";
 
-function GroceryList({ groceryList }) {
+function GroceryList({ groceryList, handlePurchase }) {
    return (
       <div className="grocery-list">
          <h1>Grocery List</h1>
@@ -16,10 +16,10 @@ function GroceryList({ groceryList }) {
                <tbody>
                {groceryList.map( item => {
                   return (
-                     <tr>
+                     <tr key={item.id}>
                         { item.complete ? 
-                           <td><Button variant="success" size="sm">Yes</Button></td> :
-                           <td><Button variant="outline-success" size="sm">No</Button></td>
+                           <td><Button variant="success" size="sm" onClick={handlePurchase}>Yes</Button></td> :
+                           <td><Button variant="outline-success" size="sm" onClick={handlePurchase}>No</Button></td>
                         }
                         <td className={item.complete ? "purchased" : "not-complete"}>{item.item.toUpperCase()}</td>
                         <td><Button variant="outline-danger" size="sm">x</Button></td>
