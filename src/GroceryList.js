@@ -1,14 +1,35 @@
 import { Table, Button, Card } from "react-bootstrap";
+import { useState } from "react";
 
-function GroceryList({ groceryList, handlePurchase, handleDelete }) {
+function GroceryList({ groceryList, handlePurchase, handleDelete, handleAddIngredient }) {
+   const [formText, setFormText]=useState("");
+
+    function onTextChange(e) {
+        setFormText(e.target.value);
+        console.log(formText);
+    }
+
+    function handleItemAddition(e) {
+      e.preventDefault();
+      console.log(formText);
+      handleAddIngredient(formText);
+      setFormText("");
+    }
+
    // Sort the grocery list so that purchased items are at the bottom of the list
    groceryList.sort(function(a, b) {
       return a.complete - b.complete;
    });
 
    return (
-      <div className="grocery-list">
+      <div className="grocery-list" onSubmit={handleItemAddition}>
          <h1>Grocery List</h1>
+         <form id="item-form" name="itemForm">
+         <input type="text" name="item-text" value={formText} onChange={onTextChange} placeholder="Add item..." />{' '}
+         <Button size="sm" as="input" type="submit" value="Submit" />
+            <p> </p>
+         </form>
+
          <Card style={{ width: '45rem' }} className="mb-2">
             <Table striped bordered hover size="sm">
                <thead>

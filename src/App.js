@@ -154,11 +154,14 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/recipes" 
-              element={<RecipeList recipes={recipeList} handleSave={handleSave} />} />
+              element={<RecipeList recipes={recipeList} 
+              handleSave={handleSave} />} />
             <Route path="/saved-recipes" 
-              element={<SavedRecipes recipes={recipeList} handleSave={handleSave} handleAddIngredient={handleAddIngredient} />} />
+              element={<SavedRecipes recipes={recipeList} 
+              handleSave={handleSave} handleAddIngredient={handleAddIngredient} />} />
             <Route path="/grocery-list" 
-              element={<GroceryList groceryList={groceryList} handlePurchase={handlePurchase} handleDelete={handleDelete}/>} />
+              element={<GroceryList groceryList={groceryList} 
+              handlePurchase={handlePurchase} handleDelete={handleDelete} handleAddIngredient={handleAddIngredient} />} />
           </Routes>
     </div>
   );
