@@ -1,6 +1,11 @@
 import { Table, Button, Card } from "react-bootstrap";
 
 function GroceryList({ groceryList, handlePurchase, handleDelete }) {
+   // Sort the grocery list so that purchased items are at the bottom of the list
+   groceryList.sort(function(a, b) {
+      return a.complete - b.complete;
+   });
+
    return (
       <div className="grocery-list">
          <h1>Grocery List</h1>
