@@ -3,8 +3,10 @@ import { Button } from "react-bootstrap";
 import { useState } from "react";
 
 function Navbar() {
+    //Set state for active navigation link
     const [activeLink, setActiveLink] = useState(0);
 
+    //Updates state of clicked navigation link
     function handleButton(e) {
         setActiveLink(parseInt(e.target.id));
     }

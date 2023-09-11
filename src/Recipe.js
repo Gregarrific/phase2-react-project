@@ -3,6 +3,8 @@ import StepListing from "./StepListing";
 import IngredientListing from "./IngredientListing";
 
 function Recipe({ recipe, border, saveRecipe, addIngredient }) {
+    
+    // Get id from ingredient list item and pass the data up to addIngredient function in App
     function handleAddIngredient(e) {
         addIngredient(e.target.id);
     }

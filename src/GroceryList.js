@@ -2,14 +2,18 @@ import { Table, Button, Card } from "react-bootstrap";
 import { useState } from "react";
 
 function GroceryList({ groceryList, handlePurchase, handleDelete, handleAddIngredient }) {
+   
+   // Set state for formText variable that keeps track of form input text
    const [formText, setFormText]=useState("");
 
-    function onTextChange(e) {
+   // Handles text input changes for the formText variable
+   function onTextChange(e) {
         setFormText(e.target.value);
         console.log(formText);
     }
-
-    function handleItemAddition(e) {
+   
+   // Handles form submission and prevents default, resets form field and passes state variable up for handleAddIngredient function
+   function handleItemAddition(e) {
       e.preventDefault();
       console.log(formText);
       handleAddIngredient(formText);

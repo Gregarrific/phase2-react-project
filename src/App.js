@@ -10,22 +10,18 @@ import GroceryList from './GroceryList';
 import Home from './Home';
 
 function App() {
-  // Create variable and function to update state of recipes
+  // Create variable and function to update state of recipes and grocery list
   const [recipeList, setRecipeList] = useState([]);
   const [groceryList, setGroceryList] = useState([]);
 
-  // Use useEffect hook to load grocery list on first load only
+  // Use useEffect hook to load grocery list and recipe list on first load only
   useEffect( () => {
-    fetch('http://localhost:3010/groceries')
+    fetch('http://localhost:3010/db')
       .then( response => response.json())
-      .then( data => setGroceryList(data));
-  }, [])
-
-  // Use useEffect hook to load recipes on first load only
-  useEffect( () => {
-    fetch('http://localhost:3010/recipes') //Recipe source -> https://frosch.cosy.sbg.ac.at/datasets/json/recipes
-      .then( response => response.json())
-      .then( data => setRecipeList(data));
+      .then( data => {
+          setGroceryList(data.groceries);
+          setRecipeList(data.recipes);
+      });
   }, [])
   
   // Handles PATCH and state for grocery list purchase
@@ -112,7 +108,6 @@ function App() {
       })
       .then (response => response.json())
       .then ( updatedGroceryList => {
-        console.log(updatedGroceryList);
         // Create new grocery list array with new item added
         const newGroceryList = [...groceryList, updatedGroceryList]
         console.log(newGroceryList);
@@ -134,11 +129,9 @@ function App() {
       .then ( updatedGroceryList => {
         // Find the index of the grocery list item that was deleted
         const indexToDelete = groceryList.findIndex((item) => item.id === groceryID);
-        console.log(indexToDelete);
         if (indexToDelete !== -1) {
           // Create a copy of the recipeList to avoid mutating
           const updatedGroceryList = [...groceryList];
-          console.log(updatedGroceryList);
           // Update the recipe at the correct index with the patched values recevied from fetch response
           updatedGroceryList.splice(indexToDelete, 1);
           // Update the state with the new recipeList
@@ -147,7 +140,8 @@ function App() {
         }
       });
     }
-
+  
+  // Display all of the child components
   return (
     <div>
           <Navbar />

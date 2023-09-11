@@ -31,19 +31,39 @@
       "complete": true
     },
     {
+      "item": "1 egg, beaten",
+      "complete": true,
+      "id": 9
+    },
+    {
+      "item": "mushrooms",
+      "complete": true,
+      "id": 10
+    },
+    {
       "item": ".5 small garlic clove",
       "complete": false,
-      "id": 7
+      "id": 12
     },
     {
-      "item": "4 crushed juniper berries",
+      "item": "handful parsley, chopped",
       "complete": false,
-      "id": 8
+      "id": 13
     },
     {
-      "item": "1 egg, beaten",
+      "item": "400g pack sausagemeator sausages",
       "complete": false,
-      "id": 9
+      "id": 14
+    },
+    {
+      "item": "375g pack ready-rolled puff pastry",
+      "complete": false,
+      "id": 15
+    },
+    {
+      "item": "1 beaten egg, to glaze",
+      "complete": false,
+      "id": 16
     }
   ],
   "recipes": [
@@ -303,7 +323,7 @@
         "Turn the heat down low and gently cook the onion in the chorizo oil for 15-20 mins or until very soft and starting to brown. Stir in the garlic, muscovado sugar, Sherry, maple syrup, espresso and chorizo.",
         "Cook slowly for 35-40 mins, stirring occasionally, until thick and syrupy. Turn off the heat, leave to cool a little, then tip everything into a food processor. Pulse briefly to chop everything up into really small pieces, then leave the mixture to cool before packing it into 2 sterilised jam jars. Will keep for up to 1 month in the fridge."
       ],
-      "favorite": true
+      "favorite": false
     },
     {
       "id": 210,

@@ -3,6 +3,7 @@ import { Row, Col } from "react-bootstrap";
 
 function SavedRecipes({recipes, handleSave, handleAddIngredient}) {
 
+    // Gets id from button onClick and passes variables up to handleSave function in App
     function saveRecipe(e) {
         const data = e.target.id.split("-");
         const recipeID = data[1];
@@ -10,6 +11,7 @@ function SavedRecipes({recipes, handleSave, handleAddIngredient}) {
         handleSave(recipeID, status);
     }
 
+    // Passes item variable up to App for handleAddIngredient function
     function addIngredient(item) {
         handleAddIngredient(item);
     }
