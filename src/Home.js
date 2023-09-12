@@ -14,7 +14,7 @@ function Home() {
             <li>Review recipes that you have saved in the Saved Recipes tab.</li>
                 <ul>
                     <li>Review saved recipe cards.</li>
-                    <li>Remove saved recipes cards.</li>
+                    <li>Remove saved recipe cards.</li>
                     <li>Add ingredients from saved recipes to your Grocery List.</li>
                 </ul>
             <li>Update/View your grocery list on the Grocery List tab.</li>

@@ -4,7 +4,7 @@ This React-based application has a searchable database of recipes, lets
 the user save recipes, review recipe details, add ingredients from
 recipes to a grocery list, add other items to the grocery list, and
 update and delete items from the grocery list. The application uses
-'json-server' for the API and has a database of seeded recipes from
+`json-server` for the API and has a database of seeded recipes from
 [<u>https://frosch.cosy.sbg.ac.at/datasets/json/recipes</u>](https://frosch.cosy.sbg.ac.at/datasets/json/recipes).
 
 There are three primary components of the application. The first is the
@@ -43,8 +43,8 @@ Styling is done using React Bootstrap with limited CSS structure.
 
 ##  Project Requirements
 
-1.  Must be a single-page application with one 'index.html' file using
-    'create-react-app'.
+1.  Must be a single-page application with one `index.html` file using
+    `create-react-app`.
 
     - *The application uses only a single-page HTML file without page
       reloads and was created using create-react-app.*
@@ -58,31 +58,31 @@ Styling is done using React Bootstrap with limited CSS structure.
     Router](https://v5.reactrouter.com/web/guides/quick-start) including
     a navigation bar that allows users to navigate between routes.
 
-    - *The application has 4 client-side routes ( '/', '/recipes',
-      '/saved-recipes', and '/grocery-list') using React Router and includes
+    - *The application has 4 client-side routes ( `/`, `/recipes`,
+      `/saved-recipes`, and `/grocery-list`) using React Router and includes
       a navigation bar that allows the user to navigate between routes.*
 
-4.  Use a 'json-server' to create a RESTful API for the backend.
+4.  Use a `json-server` to create a RESTful API for the backend.
 
-    - *'json-server' is used for the API for the backend of the
+    - *`json-server` is used for the API for the backend of the
       application.*
 
-5.  Have both a 'GET' and a 'POST' request to the JSON server with a form to
+5.  Have both a `GET` and a `POST` request to the JSON server with a form to
     make the post request, specifically a controlled form/component.
 
-    - *The application has 'GET', 'PATCH','POST', and 'DELETE' requests to the
+    - *The application has `GET`, `PATCH`,`POST`, and `DELETE` requests to the
       JSON server including ones through a controlled form.*
 
-6.  The 'json-server' data should be simple while avoiding avoid nested
+6.  The `json-server` data should be simple while avoiding avoid nested
     data and associations.
 
-    - *The 'db.json' in the application has two object arrays groceries and
+    - *The `db.json` in the application has two object arrays groceries and
       recipes with a basic structure.*
 
-7.  Upon return of the JSON data from the 'POST' request, a state update
-    by a 'setState' function is required!
+7.  Upon return of the JSON data from the `POST` request, a state update
+    by a `setState` function is required!
 
-    - *'setState' is utilized for all requests from data returned by the
+    - *`setState` is utilized for all requests from data returned by the
       JSON sever.*
 
 8.  Utilize some styling by writing CSS files or incorporate a UI
